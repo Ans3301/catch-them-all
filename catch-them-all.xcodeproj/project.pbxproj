@@ -15,6 +15,15 @@
 		E2BEA7612D52298D006CB1E9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2BEA7602D52298D006CB1E9 /* Lato-Regular.ttf */; };
 		E2BEA7632D52299F006CB1E9 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2BEA7622D52299F006CB1E9 /* Lato-Semibold.ttf */; };
 		E2BEA7652D5229AC006CB1E9 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2BEA7642D5229AC006CB1E9 /* Lato-Bold.ttf */; };
+		E2BEA7682D5236A3006CB1E9 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA7672D5236A3006CB1E9 /* SwifterSwift */; };
+		E2BEA76A2D523A53006CB1E9 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA7692D523A4C006CB1E9 /* Pokemon.swift */; };
+		E2BEA76C2D523AF5006CB1E9 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA76B2D523AF0006CB1E9 /* PokemonViewModel.swift */; };
+		E2BEA76E2D523BE9006CB1E9 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA76D2D523BD9006CB1E9 /* PokemonCollectionViewCell.swift */; };
+		E2BEA7712D68AFB0006CB1E9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA7702D68AFB0006CB1E9 /* Kingfisher */; };
+		E2BEA7742D6C7DC5006CB1E9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA7732D6C7DC5006CB1E9 /* RxCocoa */; };
+		E2BEA7762D6C7DC5006CB1E9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA7752D6C7DC5006CB1E9 /* RxSwift */; };
+		E2BEA7782D6E41EE006CB1E9 /* LightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA7772D6E41E5006CB1E9 /* LightningView.swift */; };
+		E2BEA77C2D772EF6006CB1E9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA77B2D772EEB006CB1E9 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,11 @@
 		E2BEA7602D52298D006CB1E9 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		E2BEA7622D52299F006CB1E9 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		E2BEA7642D5229AC006CB1E9 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		E2BEA7692D523A4C006CB1E9 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		E2BEA76B2D523AF0006CB1E9 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
+		E2BEA76D2D523BD9006CB1E9 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2BEA7772D6E41E5006CB1E9 /* LightningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningView.swift; sourceTree = "<group>"; };
+		E2BEA77B2D772EEB006CB1E9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BEA7742D6C7DC5006CB1E9 /* RxCocoa in Frameworks */,
+				E2BEA7712D68AFB0006CB1E9 /* Kingfisher in Frameworks */,
+				E2BEA7762D6C7DC5006CB1E9 /* RxSwift in Frameworks */,
+				E2BEA7682D5236A3006CB1E9 /* SwifterSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 		E2BEA7572D521942006CB1E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2BEA7692D523A4C006CB1E9 /* Pokemon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +103,8 @@
 		E2BEA7582D521951006CB1E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2BEA7772D6E41E5006CB1E9 /* LightningView.swift */,
+				E2BEA76D2D523BD9006CB1E9 /* PokemonCollectionViewCell.swift */,
 				E2BEA75D2D521DFE006CB1E9 /* Storyboards */,
 			);
 			path = View;
@@ -92,6 +113,7 @@
 		E2BEA7592D52195F006CB1E9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E2BEA76B2D523AF0006CB1E9 /* PokemonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -115,6 +137,7 @@
 		E2BEA75C2D521DA8006CB1E9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E2BEA77B2D772EEB006CB1E9 /* APIService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,6 +185,10 @@
 			);
 			name = "catch-them-all";
 			packageProductDependencies = (
+				E2BEA7672D5236A3006CB1E9 /* SwifterSwift */,
+				E2BEA7702D68AFB0006CB1E9 /* Kingfisher */,
+				E2BEA7732D6C7DC5006CB1E9 /* RxCocoa */,
+				E2BEA7752D6C7DC5006CB1E9 /* RxSwift */,
 			);
 			productName = "catch-them-all";
 			productReference = E2BEA71C2D5214AF006CB1E9 /* catch-them-all.app */;
@@ -191,6 +218,11 @@
 			);
 			mainGroup = E2BEA7132D5214AF006CB1E9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E2BEA7662D5236A3006CB1E9 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				E2BEA76F2D68AFB0006CB1E9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E2BEA7722D6C7DC5006CB1E9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E2BEA71D2D5214AF006CB1E9 /* Products */;
 			projectDirPath = "";
@@ -221,8 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BEA76C2D523AF5006CB1E9 /* PokemonViewModel.swift in Sources */,
 				E2BEA7542D5218E3006CB1E9 /* AppDelegate.swift in Sources */,
+				E2BEA76A2D523A53006CB1E9 /* Pokemon.swift in Sources */,
 				E2BEA7552D5218E3006CB1E9 /* SceneDelegate.swift in Sources */,
+				E2BEA76E2D523BE9006CB1E9 /* PokemonCollectionViewCell.swift in Sources */,
+				E2BEA7782D6E41EE006CB1E9 /* LightningView.swift in Sources */,
+				E2BEA77C2D772EF6006CB1E9 /* APIService.swift in Sources */,
 				E2BEA7562D5218E3006CB1E9 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +473,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2BEA7662D5236A3006CB1E9 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		E2BEA76F2D68AFB0006CB1E9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+		E2BEA7722D6C7DC5006CB1E9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2BEA7672D5236A3006CB1E9 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BEA7662D5236A3006CB1E9 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+		E2BEA7702D68AFB0006CB1E9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BEA76F2D68AFB0006CB1E9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		E2BEA7732D6C7DC5006CB1E9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BEA7722D6C7DC5006CB1E9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E2BEA7752D6C7DC5006CB1E9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BEA7722D6C7DC5006CB1E9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2BEA7142D5214AF006CB1E9 /* Project object */;
 }
