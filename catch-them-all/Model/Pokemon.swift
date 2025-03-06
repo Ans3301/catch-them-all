@@ -26,11 +26,13 @@ struct AbilityWrapper: Decodable {
 
 struct PokemonModel: Decodable {
     let name: String
+    let height: Int
+    let weight: Int
     let abilities: [AbilityWrapper]
     let imageUrl: String
 
     enum CodingKeys: String, CodingKey {
-        case name, abilities, sprites
+        case name, height, weight, abilities, sprites
     }
 
     enum SpritesKeys: String, CodingKey {
@@ -48,6 +50,8 @@ struct PokemonModel: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)
+        height = try container.decode(Int.self, forKey: .height)
+        weight = try container.decode(Int.self, forKey: .weight)
         abilities = try container.decode([AbilityWrapper].self, forKey: .abilities)
 
         let spritesContainer = try container.nestedContainer(keyedBy: SpritesKeys.self, forKey: .sprites)

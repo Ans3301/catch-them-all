@@ -24,7 +24,19 @@
 		E2BEA7762D6C7DC5006CB1E9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA7752D6C7DC5006CB1E9 /* RxSwift */; };
 		E2BEA7782D6E41EE006CB1E9 /* LightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA7772D6E41E5006CB1E9 /* LightningView.swift */; };
 		E2BEA77C2D772EF6006CB1E9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA77B2D772EEB006CB1E9 /* APIService.swift */; };
+		E2BEA77E2D7771D0006CB1E9 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA77D2D7771C8006CB1E9 /* PokemonViewController.swift */; };
+		E2BEA7802D78A2BB006CB1E9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BEA77F2D78A2AE006CB1E9 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2BEA78B2D78B2F3006CB1E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2BEA7142D5214AF006CB1E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2BEA71B2D5214AF006CB1E9;
+			remoteInfo = "catch-them-all";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E2BEA71C2D5214AF006CB1E9 /* catch-them-all.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "catch-them-all.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +54,18 @@
 		E2BEA76D2D523BD9006CB1E9 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		E2BEA7772D6E41E5006CB1E9 /* LightningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningView.swift; sourceTree = "<group>"; };
 		E2BEA77B2D772EEB006CB1E9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E2BEA77D2D7771C8006CB1E9 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
+		E2BEA77F2D78A2AE006CB1E9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		E2BEA7852D78B2F3006CB1E9 /* CatchThemAllUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchThemAllUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E2BEA7862D78B2F3006CB1E9 /* CatchThemAllUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CatchThemAllUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E2BEA7192D5214AF006CB1E9 /* Frameworks */ = {
@@ -56,6 +79,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2BEA7822D78B2F3006CB1E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E2BEA74F2D5218E3006CB1E9 /* catch-them-all */,
+				E2BEA7862D78B2F3006CB1E9 /* CatchThemAllUITests */,
 				E2BEA71D2D5214AF006CB1E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				E2BEA71C2D5214AF006CB1E9 /* catch-them-all.app */,
+				E2BEA7852D78B2F3006CB1E9 /* CatchThemAllUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +135,7 @@
 		E2BEA7582D521951006CB1E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2BEA77F2D78A2AE006CB1E9 /* DetailsView.swift */,
 				E2BEA7772D6E41E5006CB1E9 /* LightningView.swift */,
 				E2BEA76D2D523BD9006CB1E9 /* PokemonCollectionViewCell.swift */,
 				E2BEA75D2D521DFE006CB1E9 /* Storyboards */,
@@ -154,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				E2BEA74E2D5218E3006CB1E9 /* ViewController.swift */,
+				E2BEA77D2D7771C8006CB1E9 /* PokemonViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +228,29 @@
 			productReference = E2BEA71C2D5214AF006CB1E9 /* catch-them-all.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E2BEA7842D78B2F3006CB1E9 /* CatchThemAllUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2BEA78D2D78B2F3006CB1E9 /* Build configuration list for PBXNativeTarget "CatchThemAllUITests" */;
+			buildPhases = (
+				E2BEA7812D78B2F3006CB1E9 /* Sources */,
+				E2BEA7822D78B2F3006CB1E9 /* Frameworks */,
+				E2BEA7832D78B2F3006CB1E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2BEA78C2D78B2F3006CB1E9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E2BEA7862D78B2F3006CB1E9 /* CatchThemAllUITests */,
+			);
+			name = CatchThemAllUITests;
+			packageProductDependencies = (
+			);
+			productName = CatchThemAllUITests;
+			productReference = E2BEA7852D78B2F3006CB1E9 /* CatchThemAllUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +263,10 @@
 				TargetAttributes = {
 					E2BEA71B2D5214AF006CB1E9 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					E2BEA7842D78B2F3006CB1E9 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = E2BEA71B2D5214AF006CB1E9;
 					};
 				};
 			};
@@ -229,6 +290,7 @@
 			projectRoot = "";
 			targets = (
 				E2BEA71B2D5214AF006CB1E9 /* catch-them-all */,
+				E2BEA7842D78B2F3006CB1E9 /* CatchThemAllUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +308,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2BEA7832D78B2F3006CB1E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -254,17 +323,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2BEA76C2D523AF5006CB1E9 /* PokemonViewModel.swift in Sources */,
+				E2BEA7802D78A2BB006CB1E9 /* DetailsView.swift in Sources */,
 				E2BEA7542D5218E3006CB1E9 /* AppDelegate.swift in Sources */,
 				E2BEA76A2D523A53006CB1E9 /* Pokemon.swift in Sources */,
 				E2BEA7552D5218E3006CB1E9 /* SceneDelegate.swift in Sources */,
 				E2BEA76E2D523BE9006CB1E9 /* PokemonCollectionViewCell.swift in Sources */,
+				E2BEA77E2D7771D0006CB1E9 /* PokemonViewController.swift in Sources */,
 				E2BEA7782D6E41EE006CB1E9 /* LightningView.swift in Sources */,
 				E2BEA77C2D772EF6006CB1E9 /* APIService.swift in Sources */,
 				E2BEA7562D5218E3006CB1E9 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2BEA7812D78B2F3006CB1E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2BEA78C2D78B2F3006CB1E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2BEA71B2D5214AF006CB1E9 /* catch-them-all */;
+			targetProxy = E2BEA78B2D78B2F3006CB1E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E2BEA74A2D5218E3006CB1E9 /* LaunchScreen.storyboard */ = {
@@ -451,6 +537,38 @@
 			};
 			name = Release;
 		};
+		E2BEA78E2D78B2F3006CB1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.CatchThemAllUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "catch-them-all";
+			};
+			name = Debug;
+		};
+		E2BEA78F2D78B2F3006CB1E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.CatchThemAllUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "catch-them-all";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -468,6 +586,15 @@
 			buildConfigurations = (
 				E2BEA7302D5214B1006CB1E9 /* Debug */,
 				E2BEA7312D5214B1006CB1E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2BEA78D2D78B2F3006CB1E9 /* Build configuration list for PBXNativeTarget "CatchThemAllUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2BEA78E2D78B2F3006CB1E9 /* Debug */,
+				E2BEA78F2D78B2F3006CB1E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,19 +20,31 @@ final class APIService {
 
         return decoded
     }
-    
-    func fetchPokemonDetails(for pokemonEntries: [Pokemon]) async throws -> [PokemonModel] {
-        var pokemonArray: [PokemonModel] = []
-        
-        for entry in pokemonEntries {
-            guard let url = URL(string: entry.url) else { continue }
-            
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let pokemon = try JSONDecoder().decode(PokemonModel.self, from: data)
-            
-            pokemonArray.append(pokemon)
+
+    func fetchPokemonDetails(for pokemons: [Pokemon]) async -> [PokemonModel] {
+        let pokemonArray = await withTaskGroup(of: PokemonModel?.self, returning: [PokemonModel].self) { group in
+            var results: [PokemonModel] = []
+
+            for pokemon in pokemons {
+                guard let url = URL(string: pokemon.url) else { continue }
+                group.addTask {
+                    do {
+                        let (data, _) = try await URLSession.shared.data(from: url)
+                        return try JSONDecoder().decode(PokemonModel.self, from: data)
+                    } catch {
+                        print(error.localizedDescription)
+                        return nil
+                    }
+                }
+            }
+
+            for await result in group {
+                if let res = result {
+                    results.append(res)
+                }
+            }
+            return results
         }
-        
         return pokemonArray
     }
 }

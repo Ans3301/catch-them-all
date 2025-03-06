@@ -12,13 +12,12 @@ final class PokemonViewModel {
     let pokemons = BehaviorRelay<[PokemonModel]>(value: [])
     
     private let apiService = APIService()
-    private let disposeBag = DisposeBag()
 
     func fetchPokemons() {
         Task {
             do {
                 let pokemonList = try await apiService.fetchPokemonList()
-                let details = try await apiService.fetchPokemonDetails(for: pokemonList.results)
+                let details = await apiService.fetchPokemonDetails(for: pokemonList.results)
                 pokemons.accept(details)
             } catch {
                 print(error.localizedDescription)

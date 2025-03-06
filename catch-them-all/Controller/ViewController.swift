@@ -47,6 +47,8 @@ final class ViewController: UIViewController {
     
     private func setupLightningView() {
         view.addSubview(lightningView)
+        
+        lightningView.accessibilityIdentifier = "lightningView"
 
         NSLayoutConstraint.activate([
             lightningView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 114),
@@ -58,6 +60,8 @@ final class ViewController: UIViewController {
     
     private func setupTitleLabel() {
         view.addSubview(titleLabel)
+        
+        titleLabel.accessibilityIdentifier = "titleLabel"
         
         NSLayoutConstraint.activate([
             titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
@@ -82,6 +86,8 @@ final class ViewController: UIViewController {
         
         view.addSubview(collectionView)
         
+        collectionView.accessibilityIdentifier = "collectionView"
+        
         collectionView.delegate = self
         
         NSLayoutConstraint.activate([
@@ -97,6 +103,16 @@ final class ViewController: UIViewController {
             .bind(to: collectionView.rx.items(cellIdentifier: "pokemonCollectionViewCell", cellType: PokemonCollectionViewCell.self)) { _, pokemon, cell in
                 cell.configure(name: pokemon.name, ability: pokemon.abilities.first?.ability.name ?? "Unknown", imageUrl: pokemon.imageUrl)
             }
+            .disposed(by: disposeBag)
+        
+        collectionView.rx.modelSelected(PokemonModel.self)
+            .subscribe(onNext: { [weak self] pokemon in
+                let pokemonViewController = PokemonViewController()
+                pokemonViewController.pokemon = pokemon
+                pokemonViewController.modalPresentationStyle = .overFullScreen
+                pokemonViewController.modalTransitionStyle = .crossDissolve
+                self?.present(pokemonViewController, animated: true)
+            })
             .disposed(by: disposeBag)
     }
 }
