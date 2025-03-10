@@ -100,8 +100,12 @@ final class ViewController: UIViewController {
     
     private func bindViewModel() {
         viewModel.pokemons
-            .bind(to: collectionView.rx.items(cellIdentifier: "pokemonCollectionViewCell", cellType: PokemonCollectionViewCell.self)) { _, pokemon, cell in
-                cell.configure(name: pokemon.name, ability: pokemon.abilities.first?.ability.name ?? "Unknown", imageUrl: pokemon.imageUrl)
+            .drive(collectionView.rx.items(cellIdentifier: "pokemonCollectionViewCell", cellType: PokemonCollectionViewCell.self)) { _, pokemon, cell in
+                cell.configure(
+                    name: pokemon.name,
+                    ability: pokemon.abilities.first?.ability.name ?? "Unknown",
+                    imageUrl: pokemon.imageUrl
+                )
             }
             .disposed(by: disposeBag)
         

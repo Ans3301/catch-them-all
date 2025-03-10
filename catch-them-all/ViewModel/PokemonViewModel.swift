@@ -5,12 +5,16 @@
 //  Created by Мария Анисович on 04.02.2025.
 //
 
-import RxSwift
 import RxCocoa
+import RxSwift
 
 final class PokemonViewModel {
-    let pokemons = BehaviorRelay<[PokemonModel]>(value: [])
-    
+    var pokemons: Driver<[PokemonModel]> {
+        pokemonsRelay.asDriver(onErrorJustReturn: [])
+    }
+
+    private let pokemonsRelay = BehaviorRelay<[PokemonModel]>(value: [])
+
     private let apiService = APIService()
 
     func fetchPokemons() {
@@ -18,7 +22,7 @@ final class PokemonViewModel {
             do {
                 let pokemonList = try await apiService.fetchPokemonList()
                 let details = await apiService.fetchPokemonDetails(for: pokemonList.results)
-                pokemons.accept(details)
+                pokemonsRelay.accept(details)
             } catch {
                 print(error.localizedDescription)
             }
